@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/24_hom_functor.ftl]
-[learn AlgebraLibrary/18_natural_transformation.ftl]
+[read AlgebraLibrary/24_hom_functor.ftl]
+[read AlgebraLibrary/18_natural_transformation.ftl]
 
 Let K denote a field.
 

@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/07_field_is_vector_space.ftl]
-[learn AlgebraLibrary/12_ring.ftl]
+[read AlgebraLibrary/07_field_is_vector_space.ftl]
+[read AlgebraLibrary/12_ring.ftl]
 
 Let K denote a field.
 

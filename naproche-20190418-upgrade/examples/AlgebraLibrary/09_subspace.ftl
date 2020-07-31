@@ -1,4 +1,4 @@
-[learn AlgebraLibrary/05_vector_space.ftl]
+[read AlgebraLibrary/05_vector_space.ftl]
 
 Let K denote a field.
 

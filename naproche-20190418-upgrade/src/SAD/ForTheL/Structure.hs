@@ -55,7 +55,7 @@ bracketExpression = topInstruction >>= procParseInstruction
       fmap (uncurry TextInstr) (instr </> instrExit </> instrRead)
 
 procParseInstruction text = case text of
-  TextInstr _ (Instr.String (Instr.Read _) _) -> return [text]
+  TextInstr _ (Instr.String Instr.Read _) -> return [text]
   TextInstr _ (Instr.Command Instr.EXIT) -> return []
   TextInstr _ (Instr.Command Instr.QUIT) -> return []
   TextInstr _ (Instr.Strings Instr.Synonym syms) -> addSynonym syms >> fmap ((:) text) forthel

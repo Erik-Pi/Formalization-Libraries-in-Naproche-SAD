@@ -1,4 +1,4 @@
-[learn AlgebraLibrary/01_map.ftl]
+[read AlgebraLibrary/01_map.ftl]
 
 Axiom MapId. Let A be a set.
  id{A} is a map h such that Dmn(h) = A and for all a << A : h(a) = a.

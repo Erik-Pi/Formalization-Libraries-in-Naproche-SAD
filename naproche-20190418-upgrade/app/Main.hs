@@ -106,7 +106,7 @@ mainBody oldTextRef (opts0, text0) = do
       case findParseError text1 of
         Nothing -> do 
           let text = textToCheck oldText text1
-          newText <- verify (Instr.askString (Instr.File Instr.Simple) "" opts0) provers reasonerState text
+          newText <- verify (Instr.askString Instr.File "" opts0) provers reasonerState text
           case newText of
             Just txt -> writeIORef oldTextRef txt
             _ -> return ()
@@ -200,7 +200,7 @@ readArgs args = do
   let fail msgs = errorWithoutStackTrace (cat_lines (map trim_line msgs))
   unless (all wellformed instrs && null errs) $ fail errs
   when (length files > 1) $ fail ["More than one file argument\n"]
-  let commandLine = case files of [file] -> instrs ++ [Instr.String (Instr.File Instr.Simple) file]; _ -> instrs
+  let commandLine = case files of [file] -> instrs ++ [Instr.String Instr.File file]; _ -> instrs
 
   initFile <- readInit (Instr.askString Instr.Init "init.opt" commandLine)
   let initialOpts = initFile ++ map (Instr.noPos,) commandLine

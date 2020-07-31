@@ -1,4 +1,4 @@
-[learn AlgebraLibrary/00_introduction.ftl]
+[read AlgebraLibrary/00_introduction.ftl]
 
 Definition. Let f,A,B be objects.
  f is from A to B iff Dmn(f) = A and for all x << A : f(x) << B.

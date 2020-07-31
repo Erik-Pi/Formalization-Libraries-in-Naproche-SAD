@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/23_module_category.ftl]
-[learn AlgebraLibrary/17_functor.ftl]
+[read AlgebraLibrary/23_module_category.ftl]
+[read AlgebraLibrary/17_functor.ftl]
 
 Let K denote a field.
 

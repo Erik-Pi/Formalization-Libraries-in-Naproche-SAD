@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/13_unit_group.ftl]
-[learn AlgebraLibrary/14_endomorphism.ftl]
+[read AlgebraLibrary/13_unit_group.ftl]
+[read AlgebraLibrary/14_endomorphism.ftl]
 
 Let K denote a field.
 

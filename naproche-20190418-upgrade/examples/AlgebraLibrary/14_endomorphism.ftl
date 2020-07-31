@@ -1,6 +1,6 @@
-[learn AlgebraLibrary/02_composition.ftl]
-[learn AlgebraLibrary/06_homomorphism.ftl]
-[learn AlgebraLibrary/12_ring.ftl]
+[read AlgebraLibrary/02_composition.ftl]
+[read AlgebraLibrary/06_homomorphism.ftl]
+[read AlgebraLibrary/12_ring.ftl]
 
 Let K denote a field.
 

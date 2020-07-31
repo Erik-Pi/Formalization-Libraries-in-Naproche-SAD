@@ -1,4 +1,4 @@
-[learn AlgebraLibrary/17_functor.ftl]
+[read AlgebraLibrary/17_functor.ftl]
 
 Definition. Let C,D,F,G be objects.
  A natural transformation from F to G over C to D is an object n such that

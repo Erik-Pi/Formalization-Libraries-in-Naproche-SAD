@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/06_homomorphism.ftl]
-[learn AlgebraLibrary/28_quiver.ftl]
+[read AlgebraLibrary/06_homomorphism.ftl]
+[read AlgebraLibrary/28_quiver.ftl]
 
 Let K denote a field.
 Let Q denote a quiver.

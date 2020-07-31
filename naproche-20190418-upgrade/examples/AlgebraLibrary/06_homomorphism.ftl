@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/01_map.ftl]
-[learn AlgebraLibrary/05_vector_space.ftl]
+[read AlgebraLibrary/01_map.ftl]
+[read AlgebraLibrary/05_vector_space.ftl]
 
 Let K denote a field.
 

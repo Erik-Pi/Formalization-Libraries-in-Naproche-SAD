@@ -1,4 +1,4 @@
-[learn AlgebraLibrary/03_abelian_group.ftl]
+[read AlgebraLibrary/03_abelian_group.ftl]
 
 Definition Field. A field is an object K such that
      (K is an abelian group)

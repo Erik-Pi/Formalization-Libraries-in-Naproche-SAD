@@ -1,5 +1,5 @@
-[learn AlgebraLibrary/07_field_is_vector_space.ftl]
-[learn AlgebraLibrary/29_quiver_representation.ftl]
+[read AlgebraLibrary/07_field_is_vector_space.ftl]
+[read AlgebraLibrary/29_quiver_representation.ftl]
 
 Let K denote a field.
 Let M,N denote sets.

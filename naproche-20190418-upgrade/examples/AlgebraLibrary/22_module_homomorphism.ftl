@@ -1,6 +1,6 @@
-[learn AlgebraLibrary/06_homomorphism.ftl]
-[learn AlgebraLibrary/09_subspace.ftl]
-[learn AlgebraLibrary/20_algebra_and_module.ftl]
+[read AlgebraLibrary/06_homomorphism.ftl]
+[read AlgebraLibrary/09_subspace.ftl]
+[read AlgebraLibrary/20_algebra_and_module.ftl]
 
 Let K denote a field.
 

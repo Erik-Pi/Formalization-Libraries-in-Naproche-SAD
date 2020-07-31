@@ -92,20 +92,14 @@ data Bool =
   | Translation    --  print first-order translation of sentences
   deriving (Eq,Show)
 
-data ReadMode =
-    Simple   -- just read
-  | LearnAux -- read, but ignore sections
-  | Learn    -- read, but irgnore sections, turn prove and check off
-  deriving (Eq,Show)
-
 data String =
-    Init          --  init file (init.opt)
-  | Text          --  literal text
-  | File ReadMode --  read file
-  | Read ReadMode --  read library file
-  | Library       --  library directory
-  | Provers       --  prover database
-  | Prover        --  current prover
+    Init     --  init file (init.opt)
+  | Text     --  literal text
+  | File     --  read file
+  | Read     --  read library file
+  | Library  --  library directory
+  | Provers  --  prover database
+  | Prover   --  current prover
   deriving (Eq,Show)
 
 data Strings =
@@ -183,9 +177,7 @@ keywordsBool =
 
 keywordsString :: [(String, Prelude.String)]
 keywordsString =
- [(Read Simple, "read"),
-  (Read LearnAux, "learnAux"),
-  (Read Learn, "learn"),
+ [(Read, "read"),
   (Library, "library"),
   (Provers, "provers"),
   (Prover, "prover")]
@@ -198,5 +190,5 @@ keywordsStrings =
 
 isParserInstruction :: Instr -> Prelude.Bool
 isParserInstruction i = case i of
-  Command EXIT -> True; Command QUIT -> True; String (Read _) _ -> True;
+  Command EXIT -> True; Command QUIT -> True; String Read _ -> True;
   Strings Synonym _ -> True; _ -> False

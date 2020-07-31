@@ -8,6 +8,7 @@ module SAD.Import.Reader (readInit, readText) where
 
 import Data.List
 import Data.Maybe
+import qualified Data.Text as T
 import Control.Monad
 import System.IO
 import System.IO.Error
@@ -56,26 +57,32 @@ readText pathToLibrary text0 = do
 
 reader :: String -> [String] -> [State FState] -> [Text] -> IO ([Text], [Message.Report])
 
-reader _ _ _ [TextInstr pos (Instr.String Instr.Read file)] | isInfixOf ".." file =
+
+reader _ _ _ [TextInstr pos (Instr.String (Instr.Read _) file)] | isInfixOf ".." file =
   Message.errorParser (Instr.position pos) ("Illegal \"..\" in file name: " ++ quote file)
 
-reader pathToLibrary doneFiles stateList [TextInstr pos (Instr.String Instr.Read file)] =
+reader pathToLibrary doneFiles stateList [TextInstr pos (Instr.String (Instr.Read mode) file)] =
   reader pathToLibrary doneFiles stateList
-    [TextInstr pos $ Instr.String Instr.File $ pathToLibrary ++ '/' : file]
+    [TextInstr pos $ Instr.String (Instr.File mode) $ pathToLibrary ++ '/' : file]
 
-reader pathToLibrary doneFiles (pState:states) [TextInstr pos (Instr.String Instr.File file)]
+reader pathToLibrary doneFiles (pState:states) [TextInstr pos (Instr.String (Instr.File _) file)]
   | file `elem` doneFiles = do
       Message.outputMain Message.WARNING (Instr.position pos)
         ("Skipping already read file: " ++ quote file)
       (newText, newState) <- launchParser forthel pState
       reader pathToLibrary doneFiles (newState:states) newText
 
-reader pathToLibrary doneFiles (pState:states) [TextInstr _ (Instr.String Instr.File file)] = do
+reader pathToLibrary doneFiles (pState:states) [TextInstr _ (Instr.String (Instr.File mode) file)] = do
   text <-
     catch (if null file then getContents else File.read file)
       (Message.errorParser (fileOnlyPos file) . ioeGetErrorString)
-  (newText, newState) <- reader0 (filePos file) text pState
+  (newText, newState) <- reader0 (filePos file) (desiredText mode text) pState
   reader pathToLibrary (file:doneFiles) (newState:pState:states) newText
+  where
+    desiredText Instr.Simple text   = text
+    desiredText Instr.LearnAux text = removeSections text
+    desiredText Instr.Learn text    = "[prove off][check off]" ++ (removeSections text) ++ "[check on][prove on]"
+
 
 reader pathToLibrary doneFiles (pState:states) [TextInstr _ (Instr.String Instr.Text text)] = do
   (newText, newState) <- reader0 startPos text pState
@@ -110,4 +117,19 @@ launchParser :: Parser st a -> State st -> IO (a, State st)
 launchParser parser state =
   case runP parser state of
     Error err -> Message.errorParser (errorPos err) (show err)
-    Ok [PR a st] -> return (a, st)
+    Ok [PR a st] -> return (a, st)    
+
+
+removeSections :: String -> String
+
+removeSections = T.unpack
+                 . T.replace (T.pack "[prove on]") T.empty
+                 . T.replace (T.pack "[check on]") T.empty
+                 . T.replace (T.pack "[read ") (T.pack "[learnAux ")
+                 . T.replace (T.pack "[learn ") (T.pack "[learnAux ")
+                 . deleteBetween (T.pack "##Section") (T.pack "##End")
+                 . T.pack
+  where
+    deleteBetween start end = T.concat . mapOnTail (T.concat . clearHead . T.splitOn end) . T.splitOn start
+    mapOnTail f (x:xs) = (x : map f xs)
+    clearHead (y:ys) = (T.filter (== '\n') y : ys)

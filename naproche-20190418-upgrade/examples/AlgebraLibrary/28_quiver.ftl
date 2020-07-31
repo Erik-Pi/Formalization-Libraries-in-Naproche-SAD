@@ -1,4 +1,4 @@
-[read AlgebraLibrary/01_map.ftl]
+[learn AlgebraLibrary/01_map.ftl]
 
 # 1.8 quivers
 

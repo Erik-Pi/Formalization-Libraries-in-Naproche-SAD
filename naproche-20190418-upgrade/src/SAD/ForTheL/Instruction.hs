@@ -36,7 +36,7 @@ instr :: FTL (Instr.Pos, Instr)
 instr =
   instrPos addDropReport $ readInstr >>=
     (\case
-      Instr.String Instr.Read _ -> fail "'read' not allowed here"
+      Instr.String (Instr.Read _) _ -> fail "'read' not allowed here"
       Instr.Command Instr.EXIT -> fail "'exit' not allowed here"
       Instr.Command Instr.QUIT -> fail "'quit' not allowed here"
       i -> return i)
@@ -45,7 +45,7 @@ instr =
 instrRead :: FTL (Instr.Pos, Instr)
 instrRead =
   instrPos addInstrReport $ readInstr >>=
-    (\case { i@(Instr.String Instr.Read _) -> return i; _ -> mzero })
+    (\case { i@(Instr.String (Instr.Read _) _) -> return i; _ -> mzero })
 
 instrExit :: FTL (Instr.Pos, Instr)
 instrExit =

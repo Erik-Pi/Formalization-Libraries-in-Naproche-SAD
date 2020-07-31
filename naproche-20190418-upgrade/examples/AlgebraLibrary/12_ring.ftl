@@ -1,4 +1,4 @@
-[read AlgebraLibrary/03_abelian_group.ftl]
+[learn AlgebraLibrary/03_abelian_group.ftl]
 
 Definition. A ring is an object R such that
      (R is an abelian group)

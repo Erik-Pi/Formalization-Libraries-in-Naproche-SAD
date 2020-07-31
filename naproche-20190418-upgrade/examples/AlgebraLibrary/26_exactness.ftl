@@ -1,6 +1,6 @@
-[read AlgebraLibrary/23_module_category.ftl]
-[read AlgebraLibrary/17_functor.ftl]
-[read AlgebraLibrary/10_kernel.ftl]
+[learn AlgebraLibrary/23_module_category.ftl]
+[learn AlgebraLibrary/17_functor.ftl]
+[learn AlgebraLibrary/10_kernel.ftl]
 
 Let K denote a field.
 

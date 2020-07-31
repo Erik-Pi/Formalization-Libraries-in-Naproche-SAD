@@ -1,4 +1,4 @@
-[read AlgebraLibrary/04_field.ftl]
+[learn AlgebraLibrary/04_field.ftl]
 
 Let K denote a field.
 

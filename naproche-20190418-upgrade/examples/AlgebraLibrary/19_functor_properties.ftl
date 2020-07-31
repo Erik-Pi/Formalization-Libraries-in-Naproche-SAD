@@ -1,4 +1,4 @@
-[read AlgebraLibrary/18_natural_transformation.ftl]
+[learn AlgebraLibrary/18_natural_transformation.ftl]
 
 Axiom. Let x be an object. id(x) = x.
 

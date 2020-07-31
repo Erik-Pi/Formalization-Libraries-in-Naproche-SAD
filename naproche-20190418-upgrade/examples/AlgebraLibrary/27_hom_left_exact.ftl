@@ -1,5 +1,5 @@
-[read AlgebraLibrary/24_hom_functor.ftl]
-[read AlgebraLibrary/26_exactness.ftl]
+[learn AlgebraLibrary/24_hom_functor.ftl]
+[learn AlgebraLibrary/26_exactness.ftl]
 
 Let K denote a field.
 

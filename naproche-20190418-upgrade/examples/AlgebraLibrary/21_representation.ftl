@@ -1,6 +1,6 @@
-[read AlgebraLibrary/09_subspace.ftl]
-[read AlgebraLibrary/14_endomorphism.ftl]
-[read AlgebraLibrary/20_algebra_and_module.ftl]
+[learn AlgebraLibrary/09_subspace.ftl]
+[learn AlgebraLibrary/14_endomorphism.ftl]
+[learn AlgebraLibrary/20_algebra_and_module.ftl]
 
 Let K denote a field.
 

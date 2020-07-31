@@ -1,4 +1,4 @@
-[read AlgebraLibrary/16_category.ftl]
+[learn AlgebraLibrary/16_category.ftl]
 
 Definition Functor. Let C,D be objects. A functor from C to D is an object F such that
      (C and D are categories)

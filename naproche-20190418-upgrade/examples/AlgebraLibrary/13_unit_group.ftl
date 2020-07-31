@@ -1,5 +1,5 @@
-[read AlgebraLibrary/11_group.ftl]
-[read AlgebraLibrary/12_ring.ftl]
+[learn AlgebraLibrary/11_group.ftl]
+[learn AlgebraLibrary/12_ring.ftl]
 
 Let R denote a Ring.
 

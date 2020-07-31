@@ -1,4 +1,4 @@
-[read AlgebraLibrary/00_introduction.ftl]
+[learn AlgebraLibrary/00_introduction.ftl]
 
 Definition. A group is an object G such that
      (|G| is a set)

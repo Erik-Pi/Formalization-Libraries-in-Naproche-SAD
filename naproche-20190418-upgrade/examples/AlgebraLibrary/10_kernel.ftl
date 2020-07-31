@@ -1,5 +1,5 @@
-[read AlgebraLibrary/06_homomorphism.ftl]
-[read AlgebraLibrary/09_subspace.ftl]
+[learn AlgebraLibrary/06_homomorphism.ftl]
+[learn AlgebraLibrary/09_subspace.ftl]
 
 Let K denote a field.
 

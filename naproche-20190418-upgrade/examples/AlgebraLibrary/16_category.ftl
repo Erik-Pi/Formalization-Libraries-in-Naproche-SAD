@@ -1,4 +1,4 @@
-[read AlgebraLibrary/00_introduction.ftl]
+[learn AlgebraLibrary/00_introduction.ftl]
 
 Let Ob{C} stand for |C|.
 

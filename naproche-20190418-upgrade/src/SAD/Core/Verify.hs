@@ -50,7 +50,7 @@ import qualified Isabelle.Markup as Markup
 
 verify :: String -> [Prover] -> IORef RState -> Text -> IO (Maybe Text)
 verify fileName provers reasonerState (TextRoot text) = do
-  let text' = TextInstr Instr.noPos (Instr.String Instr.File fileName) : text
+  let text' = TextInstr Instr.noPos (Instr.String (Instr.File Instr.Simple) fileName) : text
   Message.outputReasoner Message.TRACING (fileOnlyPos fileName) "verification started"
 
   let verificationState =

@@ -12,3 +12,5 @@ To try out my library upgrade and the new "learn" command, copy the files in [na
 stack build
 ```
 in your naproche-20190418 directory.
+
+The exact changes in the code are highlighted [here](./commit/c13e50702f619757f28fcb67d60c8251b51882fb).

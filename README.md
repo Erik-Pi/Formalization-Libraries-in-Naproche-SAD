@@ -11,3 +11,4 @@ To try out my library upgrade and the new "learn" command, copy the files in [na
 ```
 stack build
 ```
+in your naproche-20190418 directory.

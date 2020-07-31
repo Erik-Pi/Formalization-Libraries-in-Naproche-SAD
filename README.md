@@ -13,4 +13,4 @@ stack build
 ```
 in your naproche-20190418 directory.
 
-The exact changes in the code are highlighted [here](./commit/c13e50702f619757f28fcb67d60c8251b51882fb).
+The exact changes in the code are highlighted [here](https://github.com/Erik-Pi/Formalization-Libraries-in-Naproche-SAD/commit/c13e50702f619757f28fcb67d60c8251b51882fb).

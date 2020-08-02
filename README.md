@@ -7,7 +7,7 @@ https://files.sketis.net/Isabelle_Naproche-20190611/
 ```
 and paste the folder of my [Algebra Library](./naproche-20190418-original/examples/AlgebraLibrary) inside Naproche-SAD's examples directory.
 
-To try out my library upgrade and the new "learn" command, copy the files in [naproche-20190418-upgrade](./naproche-20190418-upgrade), replace the corresponding original files and run
+To try out my library upgrade and the new "learn" instruction, copy the files in [naproche-20190418-upgrade](./naproche-20190418-upgrade), replace the corresponding original files and run
 ```
 stack build
 ```

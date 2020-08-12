@@ -212,7 +212,7 @@ Proof.
     Therefore the thesis (by MapExt).
    qed.
    Therefore F(1{N,Mod(K,A)}) = id{|Hom(K,A,M,N)|} (by MapExt).
-  Qed.
+  qed.
  
   Let us show that for all N1,N2,N3 < Mod(K,A) and all f << Mod(K,A)(N1,N2)
   and all g << Mod(K,A)(N2,N3) : F(g*f) = F(g)*F(f).

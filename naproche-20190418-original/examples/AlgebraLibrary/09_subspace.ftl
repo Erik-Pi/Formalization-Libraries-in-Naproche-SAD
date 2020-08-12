@@ -16,9 +16,6 @@ Axiom SubAdd.  Let sub(K,V,U). Let u,v < (U).       u +{U} v = u +{V} v.
 Axiom SubNeg.  Let sub(K,V,U). Let u < U.             ~{U} u = ~{V} u.
 Axiom SubSmul. Let sub(K,V,U). Let a < K and u < U. a @{U} u = a @{V} u.
 
-# Especially, every structure with the same carrier as V is forced to inherit its vector space
-# structure. This follows from the next theorem and becomes useful later on.
-
 Theorem. Let V be a vector space over K. Let W be an object. Assume |V|=|W|.
  Then W is a subspace of V over K.
 Proof.

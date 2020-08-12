@@ -1,7 +1,5 @@
 [learn AlgebraLibrary/01_map.ftl]
 
-# 1.8 quivers
-
 Definition. A quiver is an object Q such that
      (Q(0) is a set)
  and (Q(1) is a set)

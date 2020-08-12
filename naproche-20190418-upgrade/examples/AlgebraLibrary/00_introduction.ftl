@@ -40,7 +40,7 @@ Signature. Let f,x,y be objects. f(x,y) is an object.
 Signature. Let K,V be objects.   dual(K,V) is an object.
 Signature. Let K,V be objects.   V2ddV(K,V) is an object.
 Signature. Let R be an object.   Un(R) is an object.
-Signature. Let K,V be objects.   Endo(K,V) is an object.   #"End" can cause problems in proofs.
+Signature. Let K,V be objects.   Endo(K,V) is an object.   #"End" can cause parsing issues.
 Signature. Let K,V be objects.   Aut(K,V) is an object.
 Signature. Let f be an object.   Ker(f) is an object.
 
